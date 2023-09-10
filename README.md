@@ -1,1 +1,0 @@
-# majakoffie.github.io
