@@ -3,28 +3,48 @@
 <head>
   <title></title>
   <style>
-  html, body {
-    height: 100%;
-    margin: 0;
-  }
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
 
-  body {
-    background: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+    body {
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; /* Untuk membuat teks berada di atas canvas */
+    }
 
-  canvas {
-    border: 1px solid white;
- 
-  }
+    canvas {
+      border: 1px solid white;
+    }
+
+    h1 {
+      color: white;
+      text-align: center;
+    }
+    #log {
+  height: 200px;
+  width: 600px;
+  overflow: scroll;
+}
   </style>
 </head>
 <body>
+  <h1>Game Tetris</h1>
     
-    
-<canvas width="320" height="640" id="game"></canvas>
+<canvas width="320" height="640" id="game">
+</canvas>
+<canvas id="canvas" width="600" height="600" style="border:solid black 1px;">
+    Your browser does not support canvas element.
+  </canvas>
+  <br />
+  Log:
+  <pre id="log" style="border: 1px solid #ccc;"></pre>
+
+
+
 <script>
 // https://tetris.fandom.com/wiki/Tetris_Guideline
 
